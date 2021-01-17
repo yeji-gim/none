@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MyMemo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NoteEditorActivity">
+
+    <ImageButton
+        android:id="@+id/rainybt"
+        android:layout_width="32dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="336dp"
+        android:layout_marginLeft="336dp"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rainy_icon3"
+        app:backgroundTint="#56DDD9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/snowybt"
+        android:layout_width="32dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="372dp"
+        android:layout_marginLeft="372dp"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/snowy_icon2"
+        app:backgroundTint="#B8C0E6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/cloudybt"
+        android:layout_width="32dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cloudy_icon"
+        app:backgroundTint="#8BC34A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Month"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:cursorVisible="true"
+        android:ems="10"
+        android:fontFamily="@font/sambasic"
+        android:inputType="textPersonName"
+        android:textCursorDrawable="@drawable/cursor_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_conversion_absoluteHeight="45dp"
+        tools:layout_conversion_absoluteWidth="163dp" />
+
+    <EditText
+        android:id="@+id/Day"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="@font/sambasic"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/Days"
+        app:layout_constraintTop_toTopOf="parent"
+        android:cursorVisible="true"
+        android:textCursorDrawable="@drawable/cursor_color"
+        tools:ignore="MissingConstraints"
+        tools:layout_conversion_absoluteHeight="45dp"
+        tools:layout_conversion_absoluteWidth="163dp" />
+
+    <org.yechtown.mymemo.drawing
+        android:id="@+id/drawing3"
+        android:name="@+id/drawing"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Month"
+        tools:ignore="MissingConstraints"
+        tools:layout_conversion_absoluteHeight="316dp"
+        tools:layout_conversion_absoluteWidth="392dp" />/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape"
+        android:ems="10"
+        android:fontFamily="@font/sambasic"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/drawing3"
+        app:layout_constraintVertical_bias="0.205"
+        tools:layout_conversion_absoluteHeight="200dp"
+        android:cursorVisible="true"
+        android:textCursorDrawable="@drawable/cursor_color"
+        tools:layout_conversion_absoluteWidth="411dp" />/>
+
+    <TextView
+        android:id="@+id/Month_2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/outline"
+        android:gravity="bottom"
+        android:text="월"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/Day"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Days"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="13dp"
+        android:fontFamily="@font/outline"
+        android:gravity="bottom"
+        android:text="일"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/drawing3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/diary" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="45dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="218dp"
+        android:layout_marginLeft="218dp"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/outline"
+        android:scaleType="centerCrop"
+        android:text="날씨"
+        android:textColor="#000000"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/sunnybt"
+        android:layout_width="32dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="265dp"
+        android:layout_marginLeft="265dp"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sunny_icon"
+        app:backgroundTint="#FA8282"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
